@@ -80,24 +80,25 @@ class HomePage extends StatelessWidget {
                 children: [
                   Padding(padding: EdgeInsets.only(left: 20)),
                   TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Text(
-                            'Conta',
-                            style: TextStyle(
-                                fontSize: 22,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          Padding(padding: EdgeInsets.only(left: 210)),
-                          Icon(
-                            Icons.chevron_right,
-                            size: 30,
-                            color: Color(0xff6e717a),
-                          )
-                        ],
-                      ))
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        Text(
+                          'Conta',
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 220)),
+                        Icon(
+                          Icons.chevron_right,
+                          size: 28,
+                          color: Color(0xff6e717a),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
               Row(
@@ -110,8 +111,134 @@ class HomePage extends StatelessWidget {
                 ],
               )
             ],
-          )
+          ),
           //fim da conta e valor
+          SizedBox(
+            width: 30,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 30),
+            height: 60,
+            padding: EdgeInsets.only(left: 30),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          child: Image.asset(
+                            'assets/pix.png',
+                            width: 22,
+                            height: 22,
+                          ),
+                          backgroundColor: Color(0xfff0f1f5),
+                          radius: 30,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Image.asset(
+                              'assets/bar-code.png',
+                              width: 22,
+                              height: 22,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Image.asset(
+                              'assets/entrada.png',
+                              width: 35,
+                              height: 35,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Image.asset(
+                              'assets/saida.png',
+                              width: 35,
+                              height: 35,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              Icons.attach_money,
+                              color: Colors.black,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              Icons.phone_android,
+                              color: Colors.black,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              Icons.payments,
+                              color: Colors.black,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              Icons.favorite_border,
+                              color: Colors.black,
+                            ),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 12)),
+                        CircleAvatar(
+                            radius: 30,
+                            child: Icon(Icons.language, color: Colors.black),
+                            backgroundColor: Color(0xfff0f1f5)),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     ));
