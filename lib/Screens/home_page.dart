@@ -117,121 +117,272 @@ class HomePage extends StatelessWidget {
             width: 30,
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
-            height: 60,
+            margin: EdgeInsets.symmetric(vertical: 40),
+            height: 100,
             padding: EdgeInsets.only(left: 30),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Row(
                   children: [
-                    Row(
+                    Column(
                       children: [
-                        CircleAvatar(
-                          child: Image.asset(
-                            'assets/pix.png',
-                            width: 22,
-                            height: 22,
+                        Flexible(
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                child: Image.asset(
+                                  'assets/pix.png',
+                                  width: 22,
+                                  height: 22,
+                                ),
+                                backgroundColor: Color(0xfff0f1f5),
+                                radius: 30,
+                              ),
+                            ],
                           ),
-                          backgroundColor: Color(0xfff0f1f5),
-                          radius: 30,
                         ),
+                        Row(
+                          children: [
+                            Padding(padding: EdgeInsets.only(top: 40)),
+                            Text(
+                              'Área Pix',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Image.asset(
-                              'assets/bar-code.png',
-                              width: 22,
-                              height: 22,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.only(left: 12)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Image.asset(
+                                    'assets/bar-code.png',
+                                    width: 22,
+                                    height: 22,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Pagar',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Image.asset(
-                              'assets/entrada.png',
-                              width: 35,
-                              height: 35,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(left: 12, top: 40)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Image.asset(
+                                    'assets/entrada.png',
+                                    width: 35,
+                                    height: 35,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Transferir',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Image.asset(
-                              'assets/saida.png',
-                              width: 35,
-                              height: 35,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(
+                                left: 12,
+                              )),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Image.asset(
+                                    'assets/saida.png',
+                                    width: 35,
+                                    height: 35,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Depositar',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Icon(
-                              Icons.attach_money,
-                              color: Colors.black,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.only(left: 12)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Icon(
+                                    Icons.attach_money,
+                                    color: Colors.black,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              '     Pegar\nemprestado',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Icon(
-                              Icons.phone_android,
-                              color: Colors.black,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.only(left: 12)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Icon(
+                                    Icons.phone_android,
+                                    color: Colors.black,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Recarga de\n  telefone',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Icon(
-                              Icons.payments,
-                              color: Colors.black,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.only(left: 12)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Icon(
+                                    Icons.payments,
+                                    color: Colors.black,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Cobrar',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Icon(
-                              Icons.favorite_border,
-                              color: Colors.black,
-                            ),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(padding: EdgeInsets.only(left: 12)),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child: Icon(
+                                    Icons.favorite_border,
+                                    color: Colors.black,
+                                  ),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Doação',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     ),
-                    Row(
+                    Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(left: 12)),
-                        CircleAvatar(
-                            radius: 30,
-                            child: Icon(Icons.language, color: Colors.black),
-                            backgroundColor: Color(0xfff0f1f5)),
+                        Flexible(
+                          child: Row(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(
+                                left: 10,
+                              )),
+                              CircleAvatar(
+                                  radius: 30,
+                                  child:
+                                      Icon(Icons.language, color: Colors.black),
+                                  backgroundColor: Color(0xfff0f1f5)),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 12, top: 40)),
+                            Text(
+                              'Transferir\n internac.',
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        )
                       ],
                     )
                   ],
