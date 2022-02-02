@@ -7,7 +7,7 @@ Widget BoxIcon() {
     padding: const EdgeInsets.all(10.0),
     child: SizedBox(
       height: 50,
-      width: 130,
+      width: 120,
       child: ElevatedButton.icon(
         onPressed: () {},
         style: ButtonStyle(

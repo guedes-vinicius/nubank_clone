@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/Widgets/box_icon.dart';
+import 'package:nubank_clone/Widgets/box_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -403,7 +404,24 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            BoxIcon()
+            BoxIcon(),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  BoxText(
+                      'Pague seus boletos no crédito em\naté 12x e direto pelo app.'),
+                  const SizedBox(width: 6),
+                  BoxText(
+                      'Conheça Nubank Vida: um seguro\nsimples e que cabe no bolso.'),
+                  const SizedBox(
+                    width: 6,
+                  ),
+                  BoxText(
+                      'Salve seus amigos da burocracia.\nFaça um convite para o Nubank.'),
+                ],
+              ),
+            )
           ],
         ),
       ),
