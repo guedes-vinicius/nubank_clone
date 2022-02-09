@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/Widgets/box_icon.dart';
-import 'package:nubank_clone/Widgets/box_teste.dart';
 import 'package:nubank_clone/Widgets/box_text.dart';
+import 'package:nubank_clone/Widgets/linha.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -262,13 +262,14 @@ class HomePage extends StatelessWidget {
                               children: [
                                 const Padding(
                                     padding: EdgeInsets.only(left: 12)),
-                                const CircleAvatar(
+                                CircleAvatar(
                                     radius: 30,
-                                    child: Icon(
-                                      Icons.attach_money,
-                                      color: Colors.black,
+                                    child: Image.asset(
+                                      'assets/emprestado.png',
+                                      width: 35,
+                                      height: 35,
                                     ),
-                                    backgroundColor: Color(0xfff0f1f5)),
+                                    backgroundColor: const Color(0xfff0f1f5)),
                               ],
                             ),
                           ),
@@ -320,13 +321,14 @@ class HomePage extends StatelessWidget {
                               children: [
                                 const Padding(
                                     padding: EdgeInsets.only(left: 12)),
-                                const CircleAvatar(
+                                CircleAvatar(
                                     radius: 30,
-                                    child: Icon(
-                                      Icons.payments,
-                                      color: Colors.black,
+                                    child: Image.asset(
+                                      'assets/cobrar.png',
+                                      width: 35,
+                                      height: 35,
                                     ),
-                                    backgroundColor: Color(0xfff0f1f5)),
+                                    backgroundColor: const Color(0xfff0f1f5)),
                               ],
                             ),
                           ),
@@ -371,35 +373,6 @@ class HomePage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Column(
-                        children: [
-                          Flexible(
-                            child: Row(
-                              children: [
-                                const Padding(
-                                    padding: EdgeInsets.only(
-                                  left: 10,
-                                )),
-                                const CircleAvatar(
-                                    radius: 30,
-                                    child: Icon(Icons.language,
-                                        color: Colors.black),
-                                    backgroundColor: Color(0xfff0f1f5)),
-                              ],
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              const Padding(
-                                  padding: EdgeInsets.only(left: 12, top: 40)),
-                              const Text(
-                                'Transferir\n internac.',
-                                style: TextStyle(fontWeight: FontWeight.w600),
-                              )
-                            ],
-                          )
-                        ],
-                      )
                     ],
                   )
                 ],
@@ -422,7 +395,13 @@ class HomePage extends StatelessWidget {
                       'Faça um convite para o Nubank.', ''),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Separator(),
+            const SizedBox(height: 20),
+            Column()
           ],
         ),
       ),

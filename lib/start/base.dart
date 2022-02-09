@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/main.dart';
 import 'package:nubank_clone/Screens/home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Nubank Clone',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 Widget boxText(texto1Preto, textoRoxo, texto2Preto) {
   return Padding(
@@ -50,3 +50,4 @@ Widget boxText(texto1Preto, textoRoxo, texto2Preto) {
     ),
   );
 }
+*/
