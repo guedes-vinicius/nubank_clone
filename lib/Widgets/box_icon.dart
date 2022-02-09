@@ -16,10 +16,10 @@ Widget BoxIcon() {
             backgroundColor: MaterialStateProperty.all(const Color(0xfff0f1f5)),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10)))),
-        icon: const Icon(
-          Icons.credit_card,
-          size: 19,
-          color: Colors.black,
+        icon: Image.asset(
+          'assets/card.png',
+          width: 20,
+          height: 20,
         ),
         label: const Text(
           "Meus cartões",
