@@ -2,27 +2,22 @@
 
 import 'package:flutter/material.dart';
 
-Widget BoxIcon() {
+Widget BoxIcon(icone, text, right, height, width) {
   return Padding(
     padding: const EdgeInsets.all(10.0),
     child: SizedBox(
-      height: 50,
-      width: 120,
+      height: height, //50
+      width: width, //120
       child: ElevatedButton.icon(
         onPressed: () {},
         style: ButtonStyle(
-            padding:
-                MaterialStateProperty.all(const EdgeInsets.only(right: 150)),
+            padding: MaterialStateProperty.all(EdgeInsets.only(right: right)),
             backgroundColor: MaterialStateProperty.all(const Color(0xfff0f1f5)),
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10)))),
-        icon: Image.asset(
-          'assets/card.png',
-          width: 20,
-          height: 20,
-        ),
-        label: const Text(
-          "Meus cartões",
+        icon: icone,
+        label: Text(
+          text,
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.w600, fontSize: 16),
         ),
@@ -30,3 +25,10 @@ Widget BoxIcon() {
     ),
   );
 }
+/*
+Image.asset(
+          'assets/card.png',
+          width: 20,
+          height: 20,
+        ),
+*/

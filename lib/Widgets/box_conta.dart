@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/Widgets/name_function.dart';
 
 Widget boxConta() {
   return Column(
@@ -13,7 +14,8 @@ Widget boxConta() {
           ),
         ],
       ),
-      Row(
+      textInformation('Cartão de crédito', 60.0, 20.0, 110.0)
+      /*Row(
         children: [
           const Padding(padding: EdgeInsets.only(top: 60, left: 20)),
           Text('Cartão de crédito',
@@ -28,7 +30,8 @@ Widget boxConta() {
             color: Color(0xff6e717a),
           )
         ],
-      ),
+      )*/
+      ,
       Row(
         children: [
           const Padding(padding: EdgeInsets.only(top: 20, left: 20)),
@@ -53,7 +56,8 @@ Widget boxConta() {
       ),
       Row(
         children: [
-          const Padding(padding: EdgeInsets.only(top: 20, left: 20)),
+          const Padding(
+              padding: EdgeInsets.only(top: 10, left: 20, bottom: 30)),
           Text(
             'Limite disponível de R\$ 362,62',
             style: TextStyle(
@@ -65,8 +69,15 @@ Widget boxConta() {
       ),
       Row(
         children: [
-          Padding(padding: EdgeInsets.only(top: 20, left: 20)),
-          ElevatedButton(
+          Padding(
+              padding: EdgeInsets.only(
+            top: 20,
+            left: 20,
+          )),
+          SizedBox(
+            width: 180,
+            height: 40,
+            child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
                   padding: MaterialStateProperty.all(const EdgeInsets.only(
@@ -75,14 +86,16 @@ Widget boxConta() {
                   backgroundColor:
                       MaterialStateProperty.all(const Color(0xfff0f1f5)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(1)))),
+                      borderRadius: BorderRadius.circular(20)))),
               child: Text(
                 'Parcelar compras',
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                     color: Colors.black),
-              ))
+              ),
+            ),
+          )
         ],
       )
     ],

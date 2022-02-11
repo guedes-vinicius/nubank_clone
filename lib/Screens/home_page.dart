@@ -5,6 +5,7 @@ import 'package:nubank_clone/Widgets/box_conta.dart';
 import 'package:nubank_clone/Widgets/box_icon.dart';
 import 'package:nubank_clone/Widgets/box_text.dart';
 import 'package:nubank_clone/Widgets/linha.dart';
+import 'package:nubank_clone/Widgets/name_function.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -90,23 +91,7 @@ class HomePage extends StatelessWidget {
                     const Padding(padding: EdgeInsets.only(left: 20)),
                     TextButton(
                       onPressed: () {},
-                      child: Row(
-                        children: [
-                          const Text(
-                            'Conta',
-                            style: TextStyle(
-                                fontSize: 22,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          const Padding(padding: EdgeInsets.only(left: 220)),
-                          const Icon(
-                            Icons.chevron_right,
-                            size: 28,
-                            color: Color(0xff6e717a),
-                          )
-                        ],
-                      ),
+                      child: textInformation('Conta', 22.0, 0.0, 210.0),
                     )
                   ],
                 ),
@@ -379,7 +364,16 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            BoxIcon(),
+            BoxIcon(
+                Image.asset(
+                  'assets/card.png',
+                  width: 20,
+                  height: 20,
+                ),
+                "Meus cartões",
+                150.0,
+                50.0,
+                120.0),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -402,7 +396,152 @@ class HomePage extends StatelessWidget {
             ),
             Separator(),
             const SizedBox(height: 20),
-            boxConta()
+            boxConta(),
+            const SizedBox(height: 20),
+            Separator(),
+            const SizedBox(height: 20),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(left: 20)),
+                    Image.asset(
+                      'assets/emprestado.png',
+                      width: 30,
+                      height: 30,
+                    )
+                  ],
+                ),
+                textInformation('Empréstimo', 60.0, 20.0, 160.0),
+                Row(
+                  children: [
+                    const Padding(
+                        padding: EdgeInsets.only(top: 5, left: 20, bottom: 30)),
+                    const Text(
+                      'Valor disponível de até\nR\$ 25.000,00',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color(0xff6e717a),
+                          fontWeight: FontWeight.w600),
+                    )
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 30),
+            Separator(),
+            const SizedBox(height: 30),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(left: 20)),
+                    const Icon(Icons.signal_cellular_alt)
+                  ],
+                ),
+                textInformation('Investimentos', 60.0, 20.0, 139.0),
+                Row(
+                  children: [
+                    const Padding(
+                        padding: EdgeInsets.only(top: 5, left: 20, bottom: 30)),
+                    const Text(
+                      'O jeito Nu de investir: sem asteriscos,\nlinguagemfácil e a partir de R\$1.Saiba mais.',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color(0xff6e717a),
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(top: 20)),
+                    BoxIcon(
+                        Image.asset(
+                          'assets/rubi.png',
+                          width: 20,
+                          height: 20,
+                        ),
+                        "Meu Pedacinho Nubank",
+                        85.0,
+                        50.0,
+                        330.0)
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(top: 20)),
+                    BoxIcon(
+                        Image.asset(
+                          'assets/dinheiro.png',
+                          width: 22,
+                          height: 22,
+                        ),
+                        "Consultar saldo para transferência",
+                        10.0,
+                        50.0,
+                        330.0)
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 20),
+            Separator(),
+            const SizedBox(height: 20),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(left: 20)),
+                    const Icon(Icons.favorite_border)
+                  ],
+                ),
+                textInformation('Seguro de vida', 60.0, 20.0, 160.0),
+                Row(
+                  children: [
+                    const Padding(
+                        padding: EdgeInsets.only(top: 5, left: 20, bottom: 30)),
+                    const Text(
+                      'Conheça Nubank Vida: um seguro simples e\nque cabe no bolso.',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color(0xff6e717a),
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 20),
+            Separator(),
+            const SizedBox(height: 20),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(left: 20)),
+                    const Icon(Icons.shopping_bag_outlined)
+                  ],
+                ),
+                textInformation('Shopping', 60.0, 20.0, 160.0),
+                Row(
+                  children: [
+                    const Padding(
+                        padding: EdgeInsets.only(top: 5, left: 20, bottom: 30)),
+                    const Text(
+                      'Vantagens exclusivas das nossas marcas\npreferidas',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color(0xff6e717a),
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 20),
+            Separator(),
+            const SizedBox(height: 20),
           ],
         ),
       ),
