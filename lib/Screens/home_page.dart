@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/Controller/button_controller.dart';
 import 'package:nubank_clone/Widgets/box_conta.dart';
 import 'package:nubank_clone/Widgets/box_icon.dart';
 import 'package:nubank_clone/Widgets/box_text.dart';
 import 'package:nubank_clone/Widgets/linha.dart';
 import 'package:nubank_clone/Widgets/name_function.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,11 +43,14 @@ class HomePage extends StatelessWidget {
                           radius: 22,
                         ),
                         const Padding(padding: EdgeInsets.only(right: 140)),
-                        Image.asset(
+                        IconButton(
+                            onPressed: context.read<Button>().changeButton,
+                            icon: context.watch<Button>().imageButton),
+                        /*Image.asset(
                           'assets/eye_open.png',
                           width: 25,
                           height: 25,
-                        ),
+                        ),*/
                         const Padding(
                           padding: EdgeInsets.only(right: 25),
                         ),
