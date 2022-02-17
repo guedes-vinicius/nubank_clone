@@ -3,11 +3,7 @@ import 'package:provider/provider.dart';
 
 class Button extends ChangeNotifier {
   bool _stateButton = true;
-  Image _imageButton = Image.asset(
-    'assets/eye_open.png',
-    width: 25,
-    height: 25,
-  );
+  Image _imageButton = Image.asset('assets/eye_open.png');
 
   bool get stateButton => _stateButton;
   Image get imageButton => _imageButton;
@@ -19,17 +15,14 @@ class Button extends ChangeNotifier {
       _stateButton == false;
     }
     notifyListeners();
-    changeButton();
+    changeImageButton();
   }
 
   void changeImageButton() {
     if (_stateButton == true) {
+      Image.asset('assets/eye_open.png');
     } else {
-      _imageButton = Image.asset(
-        'assets/eye_closed.png',
-        width: 25,
-        height: 25,
-      );
+      _imageButton = Image.asset('assets/eye_closed.png');
     }
     notifyListeners();
   }

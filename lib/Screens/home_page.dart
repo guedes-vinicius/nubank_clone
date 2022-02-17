@@ -5,6 +5,7 @@ import 'package:nubank_clone/Controller/button_controller.dart';
 import 'package:nubank_clone/Widgets/box_conta.dart';
 import 'package:nubank_clone/Widgets/box_icon.dart';
 import 'package:nubank_clone/Widgets/box_text.dart';
+import 'package:nubank_clone/Widgets/card.dart';
 import 'package:nubank_clone/Widgets/linha.dart';
 import 'package:nubank_clone/Widgets/name_function.dart';
 import 'package:provider/provider.dart';
@@ -44,8 +45,12 @@ class HomePage extends StatelessWidget {
                         ),
                         const Padding(padding: EdgeInsets.only(right: 140)),
                         IconButton(
-                            onPressed: context.read<Button>().changeButton,
-                            icon: context.watch<Button>().imageButton),
+                          onPressed: () {
+                            context.read<Button>().changeButton();
+                          },
+                          icon: context.watch<Button>().imageButton,
+                          iconSize: 20,
+                        ),
                         /*Image.asset(
                           'assets/eye_open.png',
                           width: 25,
@@ -501,7 +506,7 @@ class HomePage extends StatelessWidget {
                     const Icon(Icons.favorite_border)
                   ],
                 ),
-                textInformation('Seguro de vida', 60.0, 20.0, 160.0),
+                textInformation('Seguro de vida', 60.0, 20.0, 139.0),
                 Row(
                   children: [
                     const Padding(
@@ -528,7 +533,7 @@ class HomePage extends StatelessWidget {
                     const Icon(Icons.shopping_bag_outlined)
                   ],
                 ),
-                textInformation('Shopping', 60.0, 20.0, 160.0),
+                textInformation('Shopping', 60.0, 20.0, 180.0),
                 Row(
                   children: [
                     const Padding(
@@ -547,6 +552,19 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 20),
             Separator(),
             const SizedBox(height: 20),
+            Container(
+              height: 300,
+              padding: const EdgeInsets.only(left: 30),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  buildCard(
+                      'assets/portabilidade.png',
+                      'Portabilidade de salário',
+                      'Sua liberdade finanecira\ncomeça com você escolhendo\nonde quer receber seu dinheiro.')
+                ],
+              ),
+            )
           ],
         ),
       ),
